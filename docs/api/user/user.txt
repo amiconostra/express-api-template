@@ -1,0 +1,41 @@
+Get Users:
+	/api/users
+	method: GET,
+    headers: Authorization -> JWT Token
+	Res: 200 {users}
+
+Get User:
+	/api/users/{USER_ID}
+	method: GET,
+    headers: Authorization -> JWT Token
+	Res: 200 {users}
+
+Get Username:
+	/api/users/{USER_ID}/username
+	method: GET,
+    headers: Authorization -> JWT Token
+	Res: 200 {username}
+
+Get User Status:
+	/api/users/{USER_ID}/status
+	method: GET,
+    headers: Authorization -> JWT Token
+	Res: 200 {status}
+
+Get User Avatar Url:
+	/api/users/{USER_ID}/avatar
+	method: GET,
+    headers: Authorization -> JWT Token
+	Res: 200 {avatar}
+
+Verify Email:
+	/api/users/{USER_ID}/verifyemail
+	method: POST,
+	body: email, verifyToken
+    Res: 200
+
+Reset Password:
+	/api/users/{USER_ID}/password
+	method: POST,
+	body: email, password, resetToken
+    Res: 200

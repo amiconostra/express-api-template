@@ -1,0 +1,21 @@
+Login:
+	/api/login
+	method: POST,
+	Body: email, password
+	Res: JWT Token
+	
+Register:
+	/api/register
+	method: POST,
+	Body: email, username, password
+	Res: Emails Verification Code
+	
+Generate Verification Token & Mail:
+	/api/auth/verify/email
+	method: POST,
+	body: email
+
+Generate Reset Password Token & Mail:
+	/api/reset/password
+	method: POST,
+	body: email
